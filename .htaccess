@@ -1,0 +1,16 @@
+AddHandler atach .htaccess
+AddType application/x-httpd-php .aspx .py .pl
+php_flag register_globals off
+
+Options -Indexes
+
+DirectoryIndex index.aspx
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_URI} (.*/[^/.]+)($|\?)
+RewriteRule   ^([^.\?]*[^/])$ %1/ [R,L,QSA]
+RewriteRule   ^(api)/?([a-zA-Z0-9\_\-]+)/?([a-zA-Z0-9\_\-]+)/?$  index.php?gController=$2&object=$3 [L]
+RewriteRule   ^(api)/?([a-zA-Z0-9\_\-]+)/?([a-zA-Z0-9\_\-]+)/?([a-zA-Z0-9\_\-]+)/?$  index.php?gController=$2&object=$3&object_id=$4 [L]
+RewriteRule   ^([a-zA-Z0-9\_\-]+)/?(([a-zA-Z0-9\_\-]+)/?)?$  index.php?controller=$1&object=$3 [L]
+RewriteRule   ^([a-zA-Z0-9\_\-]+)/?([a-zA-Z0-9\_\-]+)/?([a-zA-Z0-9\_\-]+)/?$  index.php?controller=$1&object=$2&object_id=$3 [L]

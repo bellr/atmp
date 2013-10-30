@@ -1,0 +1,534 @@
+body {padding-top: 10px;padding-bottom: 40px;}ol,ul{list-style:none;}
+.container {width: 960px;}
+.container.user{width: 960px;}
+.row{margin-left:0}
+.no_margin_left {margin-left: 0;}
+footer h4 {margin-bottom: 8px;}
+.logo {/*height:90px;*/margin-top: 15px;}
+.links a {margin-right: 5px;}
+.related_products .span2 {width:160px;}
+.icon-img-2{font-size:2em;}
+.product_comparison .thumbnail{
+    border: none;
+    text-align:center;
+
+}
+
+.product_comparison small{
+    font-weight: normal;
+}
+
+.product_comparison .product_stars {
+    text-align:center;
+    margin: 0 auto;
+    width: 85px;
+}
+.product_comparison .price_summary td{
+    text-align:center;
+}
+.navbar .btn.search_btn {
+    margin-top:1px;
+}
+
+.carousel-inner {
+    height: 286px;
+}
+.carousel-caption {
+    bottom: -77px;
+}
+
+.popular_products .span2{
+    width:160px;
+}
+
+.customer_service {
+    text-align:right;
+    font-size:13px;
+}
+
+.table td.center_text{
+    text-align:center;
+}
+
+.clear {clear: both; height: 1px; display: block; float: none !important;}
+#notifyblock,#loadingblock{position:fixed;top:0px;left:0px;height:100%;width:100%;z-index:100;display:none}
+.resError {position:relative;top:50%;left:0px;margin:0 auto;width:500px;padding:10px;FONT-SIZE:13px;FONT-FAMILY:Arial;color:#333333;FONT-WEIGHT:bold;BORDER:#ff0000 1px solid;background-color:#FFFACD;box-shadow: 0px 0px 5px rgb(51, 51, 51);text-align:center}
+.loadingDoc{position:relative;top:50%;left:0px;margin:0 auto;width:500px;padding:10px;border: 1px solid #FFE006;background-color: #FFFFAA;font-family:Verdana;font-size:13px;color:#333;FONT-WEIGHT:bold;text-align:center;box-shadow: 0px 0px 5px rgb(51, 51, 51);}
+.loadingDoc img{magrin-right:20px}
+.substrate{min-height: 100%;height: 100%;width: 100%;display: none;position: fixed;top: 0px;left: 0px;z-index: 5;}
+.disableBg {position:fixed;overflow: auto;top:0px;left:0px;height:100%;width:100%;background: rgba(0, 0, 0, 0.4);z-index:10;display:none}
+.disable-cont{position:relative;top:0px;left:0px;margin: 2% auto;padding:20px;background-color:#fff;color: #1c2530;box-shadow: 0px 0px 5px #333333;z-index:11}
+.notify{padding:10px;border: 1px solid #FFE006;background-color: #FFFFAA;font-family:Verdana;font-size:13px;color:#333;FONT-WEIGHT:bold;text-align:center;}
+.orange{color:#FFA500}
+.silver{color:#999999}
+.blue{color:#0000FF}
+.green{color:#008000}
+.red{color:#FF0000}
+.dBlock{display: block!important;}
+.dNone{display: none!important;}
+.close{font-size:25px;opacity:1;}
+
+body.login-organise, body.check-tickets{background: url("../../../img/content_inner_bg.png") repeat scroll 0% 0% rgb(250, 250, 250);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: repeat;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+
+input, button, select, textarea {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.apollo {
+    margin: 0 auto;
+    max-width: 362px;
+    border: 12px solid rgba(0, 0, 0, 0.45);
+    border-radius: 5px;
+    position: relative;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    text-align:center;
+}
+.apollo-check{max-width: 500px;}
+.apollo-check .list-code{position:relative;}
+.apollo-check .check{width:350px;font-size: 27px!important;}
+.apollo .control-group {margin-bottom:0;}
+.apollo .popover {width: 300px;}
+.apollo strong {font-weight:700;}
+.info-check-tickets{max-width:650px;margin:20px auto;}
+
+.apollo .apollo-login .apollo-seperator:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 43%;
+    border-bottom: 1px solid #cccccc;
+}
+.apollo .apollo-login .apollo-seperator:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 43%;
+    border-bottom: 1px solid #cccccc;
+}
+.apollo .apollo-forgotten-password {
+    display: none;
+    max-width: 300px;
+}
+.apollo .apollo-password-reset {
+    display: none;
+    max-width: 300px;
+    text-align: center;
+}
+.apollo .apollo-register {
+    max-width: 300px;
+    display: none;
+}
+.apollo .apollo-register .apollo-seperator:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 36%;
+    border-bottom: 1px solid #cccccc;
+}
+.apollo .apollo-register .apollo-seperator:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 36%;
+    border-bottom: 1px solid #cccccc;
+}
+.apollo a {
+    color: #444;
+}
+.apollo a:hover {
+    text-decoration: none;
+    color: #000;
+}
+.apollo.logged-in-facebook .btn-facebook,
+.apollo.logged-in-facebook .apollo-seperator,
+.apollo.logged-in-facebook input[type="text"] {
+    display: none;
+}
+.apollo.logged-in-facebook .apollo-register-account {
+    display: none;
+}
+.apollo.logged-in-facebook .apollo-change-account {
+    display: block;
+}
+.apollo .apollo-register-account {
+    text-align: center;
+    margin: 25px 0 0;
+}
+.apollo .apollo-change-account,
+.apollo .apollo-back {
+    display: none;
+    font-size: 12px;
+    margin: 25px 0 0 0;
+    text-align: center;
+}
+
+.apollo-seperator {
+    position: relative;
+    display: block;
+    margin: 0 0 20px 0;
+    text-align: center;
+    color: #666;
+}
+
+.apollo-container {
+    padding: 40px 30px 30px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.apollo-container .apollo-logging-in,
+.apollo-container .apollo-registering {
+    text-align: center;
+    display: none;
+}
+.apollo-container .apollo-image {
+    -webkit-box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 150px;
+    margin: 0 auto 40px auto;
+    width: 200px;
+    height: 200px;
+    display: block;
+    background: url(/img/avatar.png) top center;
+}
+.apollo-container .btn-facebook {
+    margin-bottom: 20px;
+}
+.apollo-container form {
+    padding: 0;
+    margin: 0;
+}
+.apollo-container form input[type="text"],
+.apollo-container form input[type="password"] {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+}
+.apollo-container .btn-facebook {
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #586B93;
+    background-image: -moz-linear-gradient(top, #7787a7, #586b93);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#7787a7), to(#586b93));
+    background-image: -webkit-linear-gradient(top, #7787a7, #586b93);
+    background-image: -o-linear-gradient(top, #7787a7, #586b93);
+    background-image: linear-gradient(to bottom, #7787a7, #586b93);
+    background-repeat: repeat-x;
+    border-color: #586B93;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7787A7', endColorstr='#586B93', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.apollo-container .btn-facebook:hover,
+.apollo-container .btn-facebook:active,
+.apollo-container .btn-facebook:focus,
+.apollo-container .btn-facebook.active,
+.apollo-container .btn-facebook.disabled,
+.apollo-container .btn-facebook[disabled] {
+    color: #FFFFFF;
+    background-color: #586B93;
+}
+.apollo-container textarea:focus, .apollo-container input[type="text"]:focus, .apollo-container input[type="password"]:focus, .apollo-container input[type="datetime"]:focus, .apollo-container input[type="datetime-local"]:focus, .apollo-container input[type="date"]:focus, .apollo-container input[type="month"]:focus, .apollo-container input[type="time"]:focus, .apollo-container input[type="week"]:focus, .apollo-container input[type="number"]:focus, .apollo-container input[type="email"]:focus, .apollo-container input[type="url"]:focus, .apollo-container input[type="search"]:focus, .apollo-container input[type="tel"]:focus, .apollo-container input[type="color"]:focus, .apollo-container .uneditable-input:focus {
+    border-color: rgba(140, 168, 41, 0.8);
+    outline: 0;
+    outline: thin dotted 9;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(140, 168, 41, 0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(140, 168, 41, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(140, 168, 41, 0.6);
+}
+
+.datepicker {
+    top: 0;
+    left: 0;
+    padding: 4px;
+    margin-top: 1px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.datepicker:before {
+    content: '';
+    display: inline-block;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -7px;
+    left: 6px;
+}
+.datepicker:after {
+    content: '';
+    display: inline-block;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    position: absolute;
+    top: -6px;
+    left: 7px;
+}
+.datepicker > div {
+    display: none;
+}
+.datepicker table {
+    width: 100%;
+    margin: 0;
+}
+.datepicker td,
+.datepicker th {
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.datepicker td.day:hover {
+    background: #eeeeee;
+    cursor: pointer;
+}
+.datepicker td.day.disabled {
+    color: #eeeeee;
+}
+.datepicker td.old,
+.datepicker td.new {
+    color: #999999;
+}
+.datepicker td.active,
+.datepicker td.active:hover {
+    color: #ffffff;
+    background-color: #006dcc;
+    background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+    background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+    background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+    background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+    border-color: #0044cc #0044cc #002a80;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #0044cc;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.datepicker td.active:hover,
+.datepicker td.active:hover:hover,
+.datepicker td.active:focus,
+.datepicker td.active:hover:focus,
+.datepicker td.active:active,
+.datepicker td.active:hover:active,
+.datepicker td.active.active,
+.datepicker td.active:hover.active,
+.datepicker td.active.disabled,
+.datepicker td.active:hover.disabled,
+.datepicker td.active[disabled],
+.datepicker td.active:hover[disabled] {
+    color: #ffffff;
+    background-color: #0044cc;
+    *background-color: #003bb3;
+}
+.datepicker td.active:active,
+.datepicker td.active:hover:active,
+.datepicker td.active.active,
+.datepicker td.active:hover.active {
+    background-color: #003399 \9;
+}
+.datepicker td span {
+    display: block;
+    width: 47px;
+    height: 54px;
+    line-height: 54px;
+    float: left;
+    margin: 2px;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.datepicker td span:hover {
+    background: #eeeeee;
+}
+.datepicker td span.active {
+    color: #ffffff;
+    background-color: #006dcc;
+    background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+    background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+    background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+    background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+    border-color: #0044cc #0044cc #002a80;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #0044cc;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.datepicker td span.active:hover,
+.datepicker td span.active:focus,
+.datepicker td span.active:active,
+.datepicker td span.active.active,
+.datepicker td span.active.disabled,
+.datepicker td span.active[disabled] {
+    color: #ffffff;
+    background-color: #0044cc;
+    *background-color: #003bb3;
+}
+.datepicker td span.active:active,
+.datepicker td span.active.active {
+    background-color: #003399 \9;
+}
+.datepicker td span.old {
+    color: #999999;
+}
+.datepicker th.switch {
+    width: 145px;
+}
+.datepicker th.next,
+.datepicker th.prev {
+    font-size: 21px;
+}
+.datepicker thead tr:first-child th {
+    cursor: pointer;
+}
+.datepicker thead tr:first-child th:hover {
+    background: #eeeeee;
+}
+.input-append.date .add-on i,
+.input-prepend.date .add-on i {
+    display: block;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+.pagebreak{page-break-after: always;}
+
+.tickets .type-payment{margin-bottom: 20px;}
+.tickets .type-payment > label{display:inline}
+.tickets .type-payment > label span{vertical-align: middle;padding-top: 2px;cursor:pointer}
+.tickets .ico-visa{width:55px;height:31px;background: url("/img/sprite_payment.png") no-repeat 0px 0px;}
+.tickets .ico-mc{width:55px;height:31px;background: url("/img/sprite_payment.png") no-repeat -56px 0px;}
+.tickets .ico-ep{width:68px;height:31px;background: url("/img/sprite_payment.png") no-repeat -111px 0px;}
+.tickets .ico-erip{width:47px;height:31px;background: url("/img/sprite_payment.png") no-repeat -180px 0px;}
+.tickets .ico-delivery{width:47px;height:31px;background: url("/img/sprite_payment.png") no-repeat -226px 0px;}
+.tickets .payments{display:inline;float:left;margin:0}
+.tickets ul.payments > li {float:left;cursor:pointer;margin-right:2px}
+.tickets .content-info{float:right;}
+.tickets .info-amount{float:right;}
+.tickets .type-pay{float:left;margin-right:30px}
+.tickets .hint{margin-top:5px;color: #dd4814;}
+.btn-pay{padding-left: 50px;padding-right: 50px;}
+.tickets .cont-bnt-pay{text-align:center;margin-top: 20px;}
+.tickets .empty-ticket{color:#dd4814}
+.tickets .in-stock{margin-left: 10px;}
+.tickets .n-order{font-size:16px;margin-bottom: 10px;}
+.tickets .link-to-order{font-size:12px;color: #999999;padding-left:10px}
+.tickets .payment-block{font-size: 13px;border:2px solid rgb(220, 240, 252);color: rgb(116, 121, 127);margin:15px 0;padding: 8px;border-radius: 6px 6px 6px 6px;position: relative;}
+.tickets .link-pay{margin-left:20px;margin-bottom: 10px;}
+.tickets .comment{width: 442px;height: auto;}
+.tickets #delivery input, .tickets #delivery textarea{margin-right:10px;margin-top:10px}
+.tickets .title-field{padding:10px 0;font-weight:bold}
+.tickets .notify-pay{text-align:center;font-weight:bold}
+
+body.tickets {padding:0px;}
+@font-face {
+    font-family: Cuprum!important;
+    src: url('/static/fonts/cuprum-v2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.data-ticket .title{margin-top:40px;float:left;}
+.data-ticket .info-start{margin-bottom:30px}
+.data-ticket h1 {font-family: "Cuprum";font-size:72px;font-weight:bold;text-transform:uppercase;float:left}
+.data-ticket .info-activity{position:relative;font-size:30px;line-height:40px;float:left;font-family:Verdana;margin-bottom:10px;height:400px;}
+.data-ticket .info-activity b{font-weight:bold;font-size:26px;}
+.data-ticket .header-tick{margin-bottom:20px}
+.data-ticket .logo-tickets, .data-ticket .logo-activity{width:278px;text-align:center;float:right}
+.data-ticket .info-place{font-weight:bold;font-size:13px;font-family:Verdana;margin-top:5px;margin-bottom:20px}
+.data-ticket .logo-activity{position:relative;height: 400px;}
+.data-ticket .hn-ticket{position:absolute;bottom:40px;left:-330px}
+.data-ticket .enter-logo{position:absolute;bottom:5px;background: #000;text-align:center;padding:30px 17px}
+.data-ticket .enter-logo span{font-size:38px;font-family:Verdana;color:#fff}
+.data-ticket .rules{font-family:Verdana;padding:5px 15px;background:#999;font-size:13px;line-height:19px;}
+.data-ticket .footer{margin-top:10px;font-family:Verdana}
+.data-ticket .footer a{color:#333}
+.data-ticket .footer_l{float:left}
+.data-ticket .footer_r{float:right}
+.data-ticket .top-button{text-align:center;margin:30px 0;}
+.data-ticket .for-print{width:600px}
+
+.check-tickets .mdash{position:relative;top:-7px;padding-left:7px;padding-right:5px}
+.check-tickets .input{text-align:center}
+.check-tickets .message{font-size:21px;display:none;margin-top:20px}
+.check-tickets .message div{font-size:13px;color:#333}
+.check-tickets .btn-confirm{display:none;margin-top:20px;}
+
+.info-order .cont-order{float:none;}
+.info-order .code-select{margin-top: 10px;}
+.info-order .code-country{margin-top:15px;margin-right:15px;float:left}
+.all-activity .header-tbl th{text-align:center}
+.all-activity .action{color:#999;font-size:11px;font-family:Tahoma}
+.all-activity .link-action{margin-bottom:10px}
+.all-activity .ticket{padding:15px 100px 15px }
+.all-activity .ico-edit-tic{float:left;margin-right:8px;width:16px;background:url("/img/sprite_ico.gif") no-repeat scroll 0px 0px transparent;cursor:pointer}
+.all-activity .item-info{margin-bottom:5px;}
+.all-activity .item-info.last{border-bottom:1px solid #ddd;padding-bottom:5px}
+.all-activity .path-info{padding-left: 20px}
+.all-activity .item-form{display:none}
+.all-activity .item-form button, .all-activity #stat-form button{position: relative;top:-5px;}
+.all-activity .stat-price{text-align:right;}
+.all-activity .text-center{text-align:center;}
+.all-activity .datapiker, .object .datapiker{width:68px}
+.all-activity .sale_tickets{margin-bottom:10px}
+.all-activity .all-amount{border-top:1px solid #ddd;}
+
+.object{width:600px;top:2%}
+.object .title{font-size:13px;font-weight:bold;color:#333;margin-right:10px;}
+.object .description{width:570px;height:300px}
+.object .activity_name{width:570px;}
+.object .time{width:16px;}
+.object .control-label{font-weight:bold;}
+
+.user .nav-link{color:#fff;text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);float: none;padding: 10px 10px 11px;line-height: 19px;border-right: 1px solid rgb(192, 61, 20);border-left: 1px solid rgb(230, 99, 58);}
+.user .nav-link:hover{color: rgb(255, 255, 255);text-decoration: none;background-color: rgb(151, 49, 14);cursor: pointer}
+
+.settings .control-label{font-weight:bold;margin-bottom:10px}
+.settings small{font-size:85%}
+.settings .delivery_info{width:900px;height:200px}
+.settings .reset-pass{position:absolute;margin-top:10px}
+
+.info_tickets{width:700px;top:5%}
+.info_tickets td.name, .info_tickets th.name{width:250px;}
+.info_tickets td.price, .info_tickets th.price{width:120px;}
+.info_tickets td.count, .info_tickets th.count{width:100px;}
+.info_tickets table.table thead{border-bottom:1px solid #333}
+.info_tickets .table td {border-top:none;}
+.info_tickets .table td.line {border-bottom:1px solid rgb(221, 221, 221)}
+.info_tickets .add td.add {padding-right:50px}
+
+
+.footer-info .copyr{color:#aaa}
