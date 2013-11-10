@@ -25,9 +25,9 @@ class show_stat extends Template {
         }
 
         $order = dataBase::kassir()->select('orders',
-            'order_id, total, fname, lname, email, add_date, order_data, status, comment, type_payment, a.activity_name, pa.place',
+            'order_id, total, indentificator, fname, lname, email, add_date, order_data, status, comment, type_payment, a.activity_name, pa.place',
             "left join activity as a using(activity_id)
-            left join place_activity as pa on pa.organise_id = orders.organise_id
+            left join place_activity as pa using(place_id)
             where {$sql_dop}",'order by order_id desc');
 
         if(!empty($order)) {
@@ -38,6 +38,10 @@ class show_stat extends Template {
 
                 foreach($placement as $p) {
                     $o['data_tickets'] .= $p['ticket_name'].' — '.$order_data[$p['info_ticket']].' шт.<br />';
+                }
+
+                if($o['status'] == 1) {
+                    $o['url_tickets'] = HTML::a(array('href' => Config::$base['KASSIR_URL'].'/tickets/'.$o['indentificator'].'/', 'target' => '_blank'),'tickets');
                 }
 
                 $o['total'] = sFormatData::getMoneyFormat($o['total']);
