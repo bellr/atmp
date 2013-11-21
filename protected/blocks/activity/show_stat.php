@@ -25,19 +25,20 @@ class show_stat extends Template {
         }
 
         $order = dataBase::kassir()->select('orders',
-            'order_id, total, indentificator, fname, lname, email, add_date, order_data, status, comment, type_payment, a.activity_name, pa.place',
+            'order_id, activity_id, total, indentificator, fname, lname, email, add_date, order_data, status, comment, type_payment, a.activity_name, pa.place',
             "left join activity as a using(activity_id)
             left join place_activity as pa using(place_id)
             where {$sql_dop}",'order by order_id desc');
 
         if(!empty($order)) {
             foreach($order as $o) {
-                $order_data = json_decode($o['order_data'],true);
-                $placement = Model::Info_ticket('KASSIR')->getInfoOrder($order_data);
 
+                $order_data = json_decode($o['order_data'],true);
+                $tickets = Model::Info_ticket('KASSIR')->get($o['activity_id']);
+                $placement = Model::Info_ticket('KASSIR')->ticketOrder($tickets,$order_data);
 
                 foreach($placement as $p) {
-                    $o['data_tickets'] .= $p['ticket_name'].' — '.$order_data[$p['info_ticket']].' шт.<br />';
+                    $o['data_tickets'] .= $p['placement_name'].' — '.$order_data[$p['info_ticket']].' шт.<br />';
                 }
 
                 if($o['status'] == 1) {
