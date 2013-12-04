@@ -45,7 +45,7 @@ class show_stat extends Template {
                     $o['url_tickets'] = HTML::a(array('href' => Config::$base['KASSIR_URL'].'/tickets/'.$o['indentificator'].'/', 'target' => '_blank'),'tickets');
                     $o['delete_order'] = HTML::span(array(
                         'class' => 'tag-a',
-                        'onClick' => "confirmVs({url:'/index.php',block:'process',act:'activity.order',p:'action=delete_order&order_id={order_id}'},'Будут удалены созданные билеты! Вы действительно хотите удалить этот заказ?');"
+                        'onClick' => "confirmVs({url:'/index.php',block:'process',act:'activity.order',p:'action=delete_order&order_id={$o['order_id']}'},'Будут удалены созданные билеты! Вы действительно хотите удалить этот заказ?');"
                     ),'Delete');
                 }
 
