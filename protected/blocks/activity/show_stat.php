@@ -47,6 +47,11 @@ class show_stat extends Template {
 
                 $o['total'] = sFormatData::getMoneyFormat($o['total']);
                 $o['date'] = date('d.m.Y H:i:s',$o['add_date']);
+                $o['delete_order'] = HTML::span(array(
+                    'class' => 'tag-a',
+                    'onClick' => "confirmVs({url:'/index.php',block:'process',act:'activity.order',p:'action=delete_order&order_id={order_id}'},'Будут удалены созданные билеты! Вы действительно хотите удалить этот заказ?');"
+                ));
+
                 $o['status_class'] = Model::Orders('KASSIR')->status_class[$o['status']];
                 $o['status'] = Model::Orders('KASSIR')->status_name[$o['status']];
                 $o['type_payment'] = Model::Orders('KASSIR')->typePayment[$o['type_payment']];
