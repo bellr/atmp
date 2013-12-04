@@ -46,7 +46,7 @@ class show_stat extends Template {
                     $o['delete_order'] = HTML::span(array(
                         'class' => 'tag-a',
                         'onClick' => "confirmVs({url:'/index.php',block:'process',act:'activity.order',p:'action=delete_order&order_id={order_id}'},'Будут удалены созданные билеты! Вы действительно хотите удалить этот заказ?');"
-                    ));
+                    ),'Delete');
                 }
 
                 $o['total'] = sFormatData::getMoneyFormat($o['total']);
