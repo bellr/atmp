@@ -12,10 +12,21 @@ class order extends Template {
         switch ($P->action) {
             case 'delete_order':
 
-                Model::Orders('KASSIR')->deleteOrder($P->order_id);
-                $answer['message'] = 'Заказ успешно удален';
+                if(is_array(json_decode(htmlspecialchars_decode($P->order_data),true))) {
 
-                break;
+                    Model::Orders('KASSIR')->deleteOrder(array(
+                        'order_id' => $P->order_id,
+                        'order_data' => htmlspecialchars_decode($P->order_data),
+                    ));
+                    $answer['message'] = 'Заказ успешно удален';
+
+                } else {
+                    $answer['message'] = 'Данные заказа слишком велики для выполнения методом GET.';
+                    $answer['status'] = 1;
+                }
+
+
+            break;
         }
 
         return json_encode($answer);
