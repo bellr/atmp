@@ -31,6 +31,7 @@ class show_stat extends Template {
             where {$sql_dop}",'order by order_id desc');
 
         if(!empty($order)) {
+            $all_total = 0;
             foreach($order as $o) {
 
                 $order_data = json_decode($o['order_data'],true);
@@ -47,6 +48,9 @@ class show_stat extends Template {
                         'class' => 'tag-a',
                         'onClick' => "confirmVs({url:'/index.php',block:'process',act:'activity.order',p:'action=delete_order&order_id={$o['order_id']}&order_data=".urlencode($o['order_data'])."'},'Будут удалены созданные билеты! Вы действительно хотите удалить этот заказ?');"
                     ),'Delete');
+
+                    $all_total = $all_total + $o['total'];
+
                 }
 
                 $o['total'] = sFormatData::getMoneyFormat($o['total']);
@@ -69,7 +73,8 @@ class show_stat extends Template {
                 unset($o['data_tickets']);
             }
 
-             $this->vars['show_data'] = $this->iterate_tmpl('activity',__CLASS__,'show_data',$vars);
+            $vars['all_total'] = sFormatData::getMoneyFormat($all_total);
+            $this->vars['show_data'] = $this->iterate_tmpl('activity',__CLASS__,'show_data',$vars);
 
             if($P->action == 'show_period') {
                 $this->tmplName = 'data_stat';
