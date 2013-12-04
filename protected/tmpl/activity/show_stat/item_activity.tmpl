@@ -6,4 +6,9 @@
     <td class="stat-price"><b>{type_payment}</b><br>{total} руб.</td>
     <td class="text-center">{date}</td>
     <td class="text-center {status_class}">{status}</td>
+    <td class="text-center">
+        <span class="tag-a" onclick="confirmVs({url:'/index.php',block:'process',act:'activity.order',p:'action=delete_order&order_id={order_id}'},'Будут удалены созданные билеты! Вы действительно хотите удалить этот заказ?');">
+           Delete
+        </span>
+    </td>
 </tr>

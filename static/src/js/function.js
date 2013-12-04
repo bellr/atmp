@@ -14,5 +14,9 @@ function reloadPage(parms) {
         $('#'+parms.resData.content).show();
     }
 }
-
+function confirmVs(parms,message) {
+    if(confirm(message)) {
+        ajaxVs(parms);
+    }
+}
 function statUser(parms) {document.getElementById('cont_stat').innerHTML = parms.req.responseText;}
