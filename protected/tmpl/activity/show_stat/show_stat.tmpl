@@ -1,7 +1,7 @@
 <script src="{STATIC_URL}/static/bootstrap-datepicker.js" type="text/javascript"></script>
     <h1> Список заказов</h1>
 <br />
-        <form name="stat-form" id="stat-form" onsubmit="ajaxVs({url:'/index.php',act:'activity.show_stat',p:serialize(this),endComplete:'false',callback:'statUser'}); return false;">
+        <form name="stat-form" id="stat-form" onsubmit="ajaxVs({url:'/block/',method:'POST',act:'activity.show_stat',p:serialize(this),endComplete:'false',callback:'statUser'}); return false;">
             <input name="action" value="show_period" type="hidden">
             <input name="organise_id" value="{organise_id}" type="hidden">
             <input name="activity_id" value="{activity_id}" type="hidden">
