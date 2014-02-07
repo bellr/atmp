@@ -85,7 +85,8 @@ else {
 	<option value="2010">2010</option>
 	<option value="2011">2011</option>
 	<option value="2012">2012</option>
-	<option value="2013" selected="selected">2013</option>
+	<option value="2013">2013</option>
+    <option value="2014" selected="selected">2014</option>
 	</select>
 <b>&nbsp;&nbsp;по :&nbsp;&nbsp;</b>
 			<select name="day_k">
@@ -116,7 +117,8 @@ else {
 	<option value="2010">2010</option>
 	<option value="2011">2011</option>
 	<option value="2012">2012</option>
-	<option value="2013" selected="selected">2013</option>
+	<option value="2013">2013</option>
+    <option value="2014" selected="selected">2014</option>
 	</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 	<input type="submit" name="sel_mount" value="Показать" style="width:100px; "onmouseover="this.style.backgroundColor='#E8E8FF';" onmouseout="this.style.backgroundColor='#f3f7ff';" id="cursor">&nbsp;
