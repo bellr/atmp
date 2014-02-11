@@ -12,7 +12,7 @@ class order extends Template {
         switch ($P->action) {
             case 'delete_order':
 
-                if(is_array(json_decode(htmlspecialchars_decode($P->order_data),true))) {
+                if(is_array(json_decode(htmlspecialchars_decode(html_entity_decode($P->order_data)),true))) {
 
                     Model::Orders('KASSIR')->deleteOrder(array(
                         'order_id' => $P->order_id,

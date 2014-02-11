@@ -31,7 +31,10 @@ class show_stat extends Template {
             where {$sql_dop}",'order by order_id desc');
 
         if(!empty($order)) {
+
             $all_total = 0;
+            $typePayment = Model::Orders('KASSIR')->typePayment;
+
             foreach($order as $o) {
 
                 $order_data = json_decode($o['order_data'],true);
@@ -46,18 +49,20 @@ class show_stat extends Template {
                     $o['url_tickets'] = HTML::a(array('href' => Config::$base['KASSIR_URL'].'/tickets/'.$o['indentificator'].'/', 'target' => '_blank'),'tickets');
                     $o['delete_order'] = HTML::span(array(
                         'class' => 'tag-a',
-                        'onClick' => "confirmVs({url:'/index.php',block:'process',act:'activity.order',p:'action=delete_order&order_id={$o['order_id']}&order_data=".urlencode($o['order_data'])."'},'Будут удалены созданные билеты! Вы действительно хотите удалить этот заказ?');"
+                        'onClick' => "confirmVs({method:'POST',url:'/block/',block:'process',act:'activity.order',p:'action=delete_order&order_id={$o['order_id']}&order_data=".urlencode($o['order_data'])."'},'Будут удалены созданные билеты! Вы действительно хотите удалить этот заказ?');"
                     ),'Delete');
 
                     $all_total = $all_total + $o['total'];
 
                 }
 
+                $amountPayment[$o['type_payment']] = $amountPayment[$o['type_payment']] + $o['total'];
+
                 $o['total'] = sFormatData::getMoneyFormat($o['total']);
                 $o['date'] = date('d.m.Y H:i:s',$o['add_date']);
                 $o['status_class'] = Model::Orders('KASSIR')->status_class[$o['status']];
                 $o['status'] = Model::Orders('KASSIR')->status_name[$o['status']];
-                $o['type_payment'] = Model::Orders('KASSIR')->typePayment[$o['type_payment']];
+                $o['type_payment'] = $typePayment[$o['type_payment']];
 
                 if(!empty($o['comment'])) {
 
@@ -73,6 +78,11 @@ class show_stat extends Template {
                 unset($o['data_tickets']);
             }
 
+            foreach((array)$amountPayment as $type_payment_id => $item_info) {
+                $vars['info_amount_payment'] .= '<b>' . $typePayment[$type_payment_id] . '</b> - ' .sFormatData::getMoneyFormat($item_info).'<br>';
+            }
+
+            //info_amount_payment
             $vars['all_total'] = sFormatData::getMoneyFormat($all_total);
             $this->vars['show_data'] = $this->iterate_tmpl('activity',__CLASS__,'show_data',$vars);
 
