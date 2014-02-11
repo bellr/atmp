@@ -12,7 +12,7 @@ foreach($demand_info as $ar) {
 	$ar['amount'] = floatval($ss[0]);
 	$ar['desc'] = 'Чек №'.$ar[id_pay].': Распространение эл. денег (Номер кошелька: '.$ar[purse].', Сумма: '.$ss[0].' WMB)';
 	$res = Extension::Payments()->Webmoney()->x2($ar,'primary_wmid');
-d($res);
+
 	if ($res->retval == 0) {
 		$db->demand_edit('y',$ar[did]);
 	}else {
