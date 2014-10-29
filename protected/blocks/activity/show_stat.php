@@ -53,10 +53,8 @@ class show_stat extends Template {
                     ),'Delete');
 
                     $all_total = $all_total + $o['total'];
-
+			$amountPayment[$o['type_payment']] = $amountPayment[$o['type_payment']] + $o['total'];
                 }
-
-                $amountPayment[$o['type_payment']] = $amountPayment[$o['type_payment']] + $o['total'];
 
                 $o['total'] = sFormatData::getMoneyFormat($o['total']);
                 $o['date'] = date('d.m.Y H:i:s',$o['add_date']);
